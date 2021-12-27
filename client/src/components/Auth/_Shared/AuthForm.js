@@ -5,7 +5,7 @@ const AuthForm = (props) => {
     let { formAttributes, children } = props
     console.log(formAttributes)
     return (
-        <div className="container">
+        <div className="auth-form-container">
             <div className="auth-container">
                 <div id="auth-form-view" className={ formAttributes.isRegisterForm ? "register-form" : "" }>
                     <div className="auth-img">
