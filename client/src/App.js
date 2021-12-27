@@ -9,11 +9,10 @@ function App() {
   return (
     
     <div>
-      <h1>Aidiii</h1>
-<NavBar></NavBar>
+      { /* <h1>Aidiii</h1>
+<NavBar></NavBar> */ }
 <Routes>
-  <Route path="/auth/*" element={<Auth />}>
-  </Route>
+  <Route path="/auth/*" element={<Auth />}/>
 </Routes>
 
 <Link to="/auth">Auth</Link>

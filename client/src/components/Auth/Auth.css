@@ -23,9 +23,12 @@
     box-shadow: 2px 2px 2px 2px rgb(122 122 122 / 20%);
 }
 
+#auth-form-view.register-form {
+    flex-direction: row-reverse;
+}
+
 .auth-img {
     width: 35%;
-    /* background-color: chartreuse; */
     height: auto;
     display: inline-block;
 }
@@ -39,7 +42,6 @@
 .auth-container-form {
     display: inline-block;
     width: 63%;
-    float: right;
     padding: 50px;
 }
 
