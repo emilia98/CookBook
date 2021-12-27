@@ -195,3 +195,9 @@ div.auth span.link-title {
     font-size: 25px;
     color: white;
 }
+
+.validation-error {
+    font-size: 0.875em;
+    color: red;
+    margin: 5px 0;
+}
