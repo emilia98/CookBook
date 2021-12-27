@@ -3,7 +3,7 @@ import ValidationErrors from "../constants/ValidationErrors"
 const passwordValidator = (password) => {
     let value = String(password).trim()
 
-    if (value.length == 0) {
+    if (value.length === 0) {
         return ValidationErrors.passwordRequired
     }
     
@@ -17,7 +17,7 @@ const passwordValidator = (password) => {
 const usernameValidator = (username) => {
     let value = String(username).trim()
 
-    if (value.length == 0) {
+    if (value.length === 0) {
         return ValidationErrors.usernameRequired
     }
 
@@ -32,7 +32,7 @@ const emailValidator = (email) => {
     let value = String(email).trim()
     let emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     
-    if (value.length == 0) {
+    if (value.length === 0) {
         return ValidationErrors.emailRequired
     }
 
@@ -47,7 +47,7 @@ const fullNameValidator = (fullName) => {
     let value = String(fullName).trim()
     let fullNameRegex = /^([A-Za-z\.\- ]+)$/
 
-    if (value.length == 0) {
+    if (value.length === 0) {
         return ValidationErrors.fullNameRequired
     }
 
@@ -62,4 +62,14 @@ const fullNameValidator = (fullName) => {
     return null
 }
 
-export { passwordValidator, usernameValidator, emailValidator, fullNameValidator };
+const usernameEmailValidator = (usernameEmail) => {
+    let value = String(usernameEmail).trim()
+
+    if (value.length === 0) {
+        return ValidationErrors.usernameEmailRequired
+    }
+
+    return null
+}
+
+export { passwordValidator, usernameValidator, emailValidator, fullNameValidator, usernameEmailValidator };

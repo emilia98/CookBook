@@ -3,7 +3,7 @@ import './Auth.css';
 import Login from './Login/Login';
 import Register from './Register/Register';
 
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 function Auth() {
     return (

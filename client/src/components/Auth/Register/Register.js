@@ -17,7 +17,6 @@ function Register() {
             'heading': 'Register',
             'text': 'Welcome to CookBook'
         },
-        imgClass: 'register-img',
         link: {
             title: 'Login',
             url: '/auth/login'

@@ -8,7 +8,7 @@ class ValidationErrors {
     static fullNameRequired = "Full Name is required!"
     static fullNameLength = "Full Name should be between 3 and 100 characters long!"
     static fullNameInvalid = "Full Name should contain only letters, \"-\" and \".\"!"
-
+    static usernameEmailRequired = "Username/Email is required!"
 }
 
 export default ValidationErrors;
