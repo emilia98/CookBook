@@ -4,6 +4,8 @@ using CookBook.Data.Common.Repositories;
 using CookBook.Data.Models;
 using CookBook.Data.Repositories;
 using CookBook.Data.Seeding;
+using CookBook.Services.External;
+using CookBook.Services.External.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -39,6 +41,9 @@ namespace CookBook.API
             });
 
             services.AddSingleton(this.configuration);
+
+            // Add External Services
+            services.AddScoped<ITokenService, TokenService>();
 
             // Data Repositories
             services.AddScoped(typeof(IDeletableEntityRepository<>), typeof(EfDeletableEntityRepository<>));
