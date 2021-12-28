@@ -9,6 +9,18 @@ class ValidationErrors {
     static fullNameLength = "Full Name should be between 3 and 100 characters long!"
     static fullNameInvalid = "Full Name should contain only letters, \"-\" and \".\"!"
     static usernameEmailRequired = "Username/Email is required!"
+
+    static recipeTitleLength = "Title should be between 3 and 100 characters long!"
+    static recipeTitleRequired = "Title is required!"
+    static preparationTimeInvalid = "Preparation TIme should be an integer number!"
+    static preparationTimeRequired = "Preparation Time is required!"
+    static preparationTimeRange = "Preparation Time should be at most 1440!"
+    static cookingTimeInvalid = "Cooking Time should be an integer number!"
+    static cookingTimeRequired = "Cooking Time is required!"
+    static cookingTimeRange = "Cooking Time should be at most 1440!"
+    static servingsInvalid = "Servings should be an integer number!"
+    static servingsRequired = "Servings is required!"
+    static servingsRange = "Servings should be at most 20!"
 }
 
 export default ValidationErrors;
