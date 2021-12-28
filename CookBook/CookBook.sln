@@ -24,7 +24,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CookBook.Data.Models", "Dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CookBook.Common", "Common\CookBook.Common\CookBook.Common.csproj", "{968BFC18-30BD-401C-81FE-732054E921BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CookBook.Services.Mapping", "CookBook.Services.Mapping\CookBook.Services.Mapping.csproj", "{0AB0311A-FAD5-4D52-803A-176D2D72DF7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CookBook.Services.Mapping", "Services\CookBook.Services.Mapping\CookBook.Services.Mapping.csproj", "{0A2FCAF6-9467-473B-9DC7-FF9D43F1D06E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,10 +52,10 @@ Global
 		{968BFC18-30BD-401C-81FE-732054E921BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{968BFC18-30BD-401C-81FE-732054E921BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{968BFC18-30BD-401C-81FE-732054E921BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0AB0311A-FAD5-4D52-803A-176D2D72DF7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0AB0311A-FAD5-4D52-803A-176D2D72DF7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0AB0311A-FAD5-4D52-803A-176D2D72DF7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0AB0311A-FAD5-4D52-803A-176D2D72DF7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A2FCAF6-9467-473B-9DC7-FF9D43F1D06E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A2FCAF6-9467-473B-9DC7-FF9D43F1D06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A2FCAF6-9467-473B-9DC7-FF9D43F1D06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A2FCAF6-9467-473B-9DC7-FF9D43F1D06E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,7 +66,7 @@ Global
 		{CF532CA4-9BF1-4182-89E4-B1212F1B8C08} = {F8F7CE8E-0861-41F6-A874-BC1FF46B72B7}
 		{8884A5C0-F1C6-4CBC-8B6A-FA4E09B38C76} = {F8F7CE8E-0861-41F6-A874-BC1FF46B72B7}
 		{968BFC18-30BD-401C-81FE-732054E921BF} = {FFB0DE25-C508-4B58-99CE-DF88E8871E9B}
-		{0AB0311A-FAD5-4D52-803A-176D2D72DF7E} = {18252B59-982C-4BDF-8DAE-EEFA6775AECD}
+		{0A2FCAF6-9467-473B-9DC7-FF9D43F1D06E} = {18252B59-982C-4BDF-8DAE-EEFA6775AECD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FEEE0FC2-CF50-4903-9CB7-D05E0278587A}
