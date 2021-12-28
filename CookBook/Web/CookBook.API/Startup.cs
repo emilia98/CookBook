@@ -4,6 +4,8 @@ using CookBook.Data.Common.Repositories;
 using CookBook.Data.Models;
 using CookBook.Data.Repositories;
 using CookBook.Data.Seeding;
+using CookBook.Services.Data;
+using CookBook.Services.Data.Contracts;
 using CookBook.Services.External;
 using CookBook.Services.External.Contracts;
 using Microsoft.AspNetCore.Builder;
@@ -51,9 +53,7 @@ namespace CookBook.API
             services.AddScoped<IDbQueryRunner, DbQueryRunner>();
 
             // Application Services
-
-
-
+            services.AddScoped<IRecipeService, RecipeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

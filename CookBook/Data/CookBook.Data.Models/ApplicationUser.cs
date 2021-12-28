@@ -27,5 +27,7 @@ namespace CookBook.Data.Models
         public virtual ICollection<IdentityUserClaim<int>> Claims { get; set; }
 
         public virtual ICollection<IdentityUserLogin<int>> Logins { get; set; }
+
+        public virtual ICollection<Recipe> Recipes { get; set; }
     }
 }

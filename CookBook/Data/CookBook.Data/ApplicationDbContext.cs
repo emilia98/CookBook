@@ -22,7 +22,8 @@ namespace CookBook.Data
         {
         }
 
-        // public DbSet<Setting> Settings { get; set; }
+        // DbSets
+        public DbSet<Recipe> Recipes { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);
 
