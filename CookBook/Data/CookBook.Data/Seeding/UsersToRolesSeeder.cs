@@ -17,6 +17,7 @@ namespace CookBook.Data.Seeding
 
             await SeedUserToRole(dbContext, userManager, roleManager, "admin", GlobalConstants.AdministratorRoleName);
             await SeedUserToRole(dbContext, userManager, roleManager, "editor", GlobalConstants.EditorRoleName);
+            await SeedUserToRole(dbContext, userManager, roleManager, "ordinary_user", GlobalConstants.UserRoleName);
         }
 
         private static async Task SeedUserToRole(
