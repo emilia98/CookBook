@@ -1,0 +1,8 @@
+.recipe-titles .main-title{
+    text-transform: uppercase;
+}
+
+.recipe-titles .subtitle {
+    color: darkgray;
+    font-weight: 100
+}
