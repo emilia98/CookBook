@@ -19,6 +19,7 @@ const NewRecipe = () => {
         let preparationTime = formData.get('preparationTime');
         let cookingTime = formData.get('cookingTime');
         let servings = formData.get('servings');
+        let description = formData.get('description');
     }
 
     return (

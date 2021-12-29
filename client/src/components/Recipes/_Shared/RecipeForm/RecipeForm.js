@@ -10,6 +10,13 @@ const RecipeForm = (props) => {
     let cookingTimeField = fields.cookingTime
     let servingsField = fields.servings
 
+    let description = ''
+
+    const handleDescriptionChange = (newValue) => {
+        description = newValue
+        console.log("Description", description)
+    }
+
     return (
         <div className="recipe-form">
             <form onSubmit={handleSubmit} autoComplete='off' autoCorrect='off'>
@@ -47,12 +54,17 @@ const RecipeForm = (props) => {
                 <div className="row">
                     <div className="recipe-section-title">Recipe Algorithm</div>
                     <div className="com-md-12">
-                        <MarkdownEditor initValue={""}/>
+                        <MarkdownEditor initValue={""} onDescriptionChanged={handleDescriptionChange}/>
                     </div>
                 </div>
                 <hr className="recipe-form-separator" />
                 <div className="row">
                     <div className="recipe-section-title">Recipe Multimedia</div>
+                    <div className="row">
+                        <div className="col-md-4 col-sm-6 col-xs-12">
+                            
+                        </div>
+                    </div>
                 </div>
                 <div className="recipe-submit-form">
                     <button type="submit" className="btn btn-lg btn-primary">Add New Recipe</button>
@@ -63,11 +75,17 @@ const RecipeForm = (props) => {
     );
 }
 
-const MarkdownEditor = ( {initValue} ) => {
+const MarkdownEditor = ( {initValue, onDescriptionChanged} ) => {
     let [value, setValue] = useState(initValue)
 
+    const handleChange = (changedValue) => {
+        onDescriptionChanged(changedValue)
+        setValue(changedValue)
+    }
+
     return (
-        <MDEditor value={value} onChange={setValue} commands={[
+        <div>
+            <MDEditor value={value} onChange={handleChange} commands={[
             commands.bold,
             commands.italic,
             commands.strikethrough,
@@ -81,6 +99,8 @@ const MarkdownEditor = ( {initValue} ) => {
             commands.orderedListCommand]}
             fullscreen={false}
         />
+        <input type="hidden" name="description" value={value}/>
+        </div>
     )
 }
 
