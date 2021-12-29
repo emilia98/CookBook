@@ -32,7 +32,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CookBook.InputModels", "Web
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CookBook.Services.Data", "Services\CookBook.Services.Data\CookBook.Services.Data.csproj", "{938ED6CD-A7F7-48BD-96DE-71686C336C0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CookBook.OutputModels", "CookBook.OutputModels\CookBook.OutputModels.csproj", "{D4B8F99D-84E6-4168-8E9D-F6F03555C763}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CookBook.OutputModels", "Web\CookBook.OutputModels\CookBook.OutputModels.csproj", "{77CC8C44-C871-468F-B329-2D1BFF2928CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,10 +76,10 @@ Global
 		{938ED6CD-A7F7-48BD-96DE-71686C336C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{938ED6CD-A7F7-48BD-96DE-71686C336C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{938ED6CD-A7F7-48BD-96DE-71686C336C0F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4B8F99D-84E6-4168-8E9D-F6F03555C763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4B8F99D-84E6-4168-8E9D-F6F03555C763}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4B8F99D-84E6-4168-8E9D-F6F03555C763}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4B8F99D-84E6-4168-8E9D-F6F03555C763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77CC8C44-C871-468F-B329-2D1BFF2928CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77CC8C44-C871-468F-B329-2D1BFF2928CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77CC8C44-C871-468F-B329-2D1BFF2928CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77CC8C44-C871-468F-B329-2D1BFF2928CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,7 +94,7 @@ Global
 		{73AEA1DA-38FB-41A3-8040-EA321433696F} = {18252B59-982C-4BDF-8DAE-EEFA6775AECD}
 		{02437A6C-0270-4C9A-BE1E-035CE4404EF4} = {949935F7-664C-49CC-8063-C8EDDA2360C8}
 		{938ED6CD-A7F7-48BD-96DE-71686C336C0F} = {18252B59-982C-4BDF-8DAE-EEFA6775AECD}
-		{D4B8F99D-84E6-4168-8E9D-F6F03555C763} = {949935F7-664C-49CC-8063-C8EDDA2360C8}
+		{77CC8C44-C871-468F-B329-2D1BFF2928CD} = {949935F7-664C-49CC-8063-C8EDDA2360C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FEEE0FC2-CF50-4903-9CB7-D05E0278587A}

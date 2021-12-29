@@ -19,7 +19,9 @@
     <ProjectReference Include="..\..\Data\CookBook.Data\CookBook.Data.csproj" />
     <ProjectReference Include="..\..\Services\CookBook.Services.Data\CookBook.Services.Data.csproj" />
     <ProjectReference Include="..\..\Services\CookBook.Services.External\CookBook.Services.External.csproj" />
+    <ProjectReference Include="..\..\Services\CookBook.Services.Mapping\CookBook.Services.Mapping.csproj" />
     <ProjectReference Include="..\CookBook.InputModels\CookBook.InputModels.csproj" />
+    <ProjectReference Include="..\CookBook.OutputModels\CookBook.OutputModels.csproj" />
   </ItemGroup>
 
 </Project>

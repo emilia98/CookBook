@@ -50,6 +50,7 @@ namespace CookBook.API.Controllers
             }
 
             return Ok(new {
+                Id = user.Id,
                 Username = user.UserName,
                 Token = await tokenService.CreateToken(user)
             });
@@ -96,6 +97,7 @@ namespace CookBook.API.Controllers
             }
 
             return Ok(new {
+                Id = newUser.Id,
                 Username = newUser.UserName,
                 Token = await tokenService.CreateToken(newUser)
             });

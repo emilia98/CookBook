@@ -17,6 +17,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Net.Http.Headers;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 
@@ -39,7 +40,13 @@ namespace CookBook.API
                 typeof(LoginInputModel).GetTypeInfo().Assembly,
                 typeof(RecipeOutputModel).GetTypeInfo().Assembly);
 
-
+            services.AddCors(options => {
+                options.AddPolicy("CORSPolicy", builder => {
+                    builder.WithOrigins("http://localhost:3000")
+                    .WithMethods("GET", "POST", "PUT", "DELETE")
+                    .WithHeaders(HeaderNames.ContentType);
+                });
+            });
             services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer(this.configuration.GetConnectionString("DefaultConnection")));
 
@@ -85,6 +92,8 @@ namespace CookBook.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("CORSPolicy");
 
             app.UseAuthorization();
             app.UseAuthentication();
