@@ -4,10 +4,13 @@ using CookBook.Data.Common.Repositories;
 using CookBook.Data.Models;
 using CookBook.Data.Repositories;
 using CookBook.Data.Seeding;
+using CookBook.InputModels.Authentication;
+using CookBook.OutputModels;
 using CookBook.Services.Data;
 using CookBook.Services.Data.Contracts;
 using CookBook.Services.External;
 using CookBook.Services.External.Contracts;
+using CookBook.Services.Mapping;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +18,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 namespace CookBook.API
 {
@@ -30,6 +34,12 @@ namespace CookBook.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            AutoMapperConfig.RegisterMappings(
+                typeof(Recipe).GetTypeInfo().Assembly,
+                typeof(LoginInputModel).GetTypeInfo().Assembly,
+                typeof(RecipeOutputModel).GetTypeInfo().Assembly);
+
+
             services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer(this.configuration.GetConnectionString("DefaultConnection")));
 
@@ -59,6 +69,7 @@ namespace CookBook.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             using (var serviceScope = app.ApplicationServices.CreateScope()) {
                 var dbContext = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
                 dbContext.Database.Migrate();
