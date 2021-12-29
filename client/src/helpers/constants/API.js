@@ -4,6 +4,10 @@ class APIEndpoints {
     static getAuthEndpoint = (endpointURL) => {
         return `${baseURL}/auth/${endpointURL}`
     }
+
+    static getRecipeEndpoint = (endpointURL) => {
+        return `${baseURL}/recipe/${endpointURL}`
+    }
 }
 
 class Methods {
