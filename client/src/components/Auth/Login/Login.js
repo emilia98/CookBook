@@ -44,7 +44,7 @@ const Login = () => {
         .then((authData) => {
             login(authData);
             toast.success("Successfully logged in!", {
-                duration: 2000
+                duration: 3500
             })
             navigate('/');
         }).catch(err => {

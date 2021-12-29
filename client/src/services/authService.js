@@ -14,7 +14,7 @@ export const login = async (usernameEmail, password) => {
     if (res.ok) {
         return jsonResult;
     } else {
-        throw jsonResult.message;
+        throw jsonResult;
     }
 }
 

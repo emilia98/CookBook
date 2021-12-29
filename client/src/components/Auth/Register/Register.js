@@ -2,8 +2,15 @@ import React from 'react';
 import { emailValidator, fullNameValidator, passwordValidator, usernameValidator } from '../../../helpers/validators/authValidator';
 import AuthFloatingLabelField from '../_Shared/AuthFloatingLabelField';
 import AuthForm from '../_Shared/AuthForm';
+import * as authService from '../../../services/authService';
+import { useAuthContext } from '../../../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 function Register() {
+    const { login } = useAuthContext();
+    const navigate = useNavigate();
+
     let fields = [
         { placeholder: "Full Name", type: "text", name: "fullName", id: "fullName", label: "Full Name", validatorFunc: fullNameValidator},
         { placeholder: "Username", type: "text", name: "username", id: "username", label: "Username", validatorFunc: usernameValidator },
@@ -40,6 +47,20 @@ function Register() {
         let email = formData.get('email');
         let password = formData.get('password');
         // let confirmPassword = formData.get('confirmPassword');
+
+        authService.register(username, email, fullName, password)
+        .then((authData) => {
+            login(authData);
+            toast.success("Successfully logged in!", {
+                duration: 3500
+            })
+            navigate('/');
+        }).catch(err => {
+            console.log(err);
+            toast.error("Error occurred!", {
+                duration: 3000
+            });
+        })
     }
 
     /*

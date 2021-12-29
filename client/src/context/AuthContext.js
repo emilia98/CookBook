@@ -1,4 +1,4 @@
-import { createContext, useContext} from 'react';
+import { createContext, useContext } from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
 
 const initialAuthState = {
@@ -9,7 +9,7 @@ const initialAuthState = {
 
 export const AuthContext = createContext();
 
-export const AuthProvider = ( { children } ) => {
+export const AuthProvider = ({ children }) => {
     const [user, setUser] = useLocalStorage('user', initialAuthState);
 
     const login = (authData) => {
@@ -21,9 +21,9 @@ export const AuthProvider = ( { children } ) => {
     }
 
     return (
-        <AuthContext.Provider value = {{ user, login, logout, isAuthenticated: user.token }}>
-           { children }
-           </AuthContext.Provider>
+        <AuthContext.Provider value={{ user, login, logout, isAuthenticated: user.token }}>
+            {children}
+        </AuthContext.Provider>
     )
 }
 
