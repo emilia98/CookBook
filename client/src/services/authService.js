@@ -1,8 +1,8 @@
 import { APIEndpoints, Methods } from '../helpers/constants/API';
 
 export const login = async (usernameEmail, password) => {
-    let res = await fetch(`${baseAuthUrl}/login`, {
-        method: Methods.get,
+    let res = await fetch(APIEndpoints.getAuthEndpoint('login'), {
+        method: Methods.post,
         headers: {
             "Content-Type": "application/json"
         },

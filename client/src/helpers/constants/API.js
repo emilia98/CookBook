@@ -1,6 +1,6 @@
-class APIEndpoints {
-    static baseURL = "https://localhost:5001/api"
+const baseURL = "https://localhost:5001/api";
 
+class APIEndpoints {
     static getAuthEndpoint = (endpointURL) => {
         return `${baseURL}/auth/${endpointURL}`
     }

@@ -2,8 +2,15 @@ import React from 'react';
 import { passwordValidator, usernameEmailValidator } from '../../../helpers/validators/authValidator';
 import AuthFloatingLabelField from '../_Shared/AuthFloatingLabelField';
 import AuthForm from '../_Shared/AuthForm';
+import toast from 'react-hot-toast';
+import * as authService from '../../../services/authService';
+import { useAuthContext } from '../../../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const { login } = useAuthContext();
+    const navigate = useNavigate();
+
     let fields = [
         { placeholder: "Username/Email", type: "text", name: "usernameEmail", id: "usernameEmail", label: "Username/Email", validatorFunc: usernameEmailValidator },
         { placeholder: "Password", type: "password", name: "password", id: "password", label: "Password", validatorFunc: passwordValidator },
@@ -32,25 +39,19 @@ const Login = () => {
         let formData = new FormData(e.currentTarget);
         let usernameEmail = formData.get('usernameEmail');
         let password = formData.get('password');
-    }
 
-    /*
-    let formData = new FormData(e.currentTarget);
-
-        let email = formData.get('email');
-        let password = formData.get('password');
-
-        authService.login(email, password)
-            .then((authData) => {
-                login(authData);
-                addNotification('You logged in successfully', types.success);
-                navigate('/dashboard');
+        authService.login(usernameEmail, password)
+        .then((authData) => {
+            login(authData);
+            toast.success("Successfully logged in!", {
+                duration: 2000
             })
-            .catch(err => {
-                // TODO: show notification
-                console.log(err);
-            });
-    */
+            navigate('/');
+        }).catch(err => {
+            console.log(err);
+            toast.error("Error");
+        })
+    }
 
     return (
         <AuthForm formAttributes={formAttributes}>

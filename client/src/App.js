@@ -6,11 +6,13 @@ import Auth from './components/Auth';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import Recipes from './components/Recipes/Recipes';
 import { AuthProvider } from './context/AuthContext';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
 
     <AuthProvider>
+      
       <div>
         <Routes>
           <Route path="/recipe/*" element={<Recipes />} />
@@ -19,6 +21,7 @@ function App() {
 
         <Link to="/auth">Auth</Link>
       </div>
+      <Toaster />
     </AuthProvider>
   );
 }
